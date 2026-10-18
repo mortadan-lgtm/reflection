@@ -501,7 +501,7 @@ const LESSONS = [
 STATIONS.forEach((st,k)=>st.lesson=LESSONS[k]);
 
 /* ===== State ===== */
-const KEY = 'sod-' + TASK.id;
+const KEY = 'task-' + TASK.id;
 let S = null;
 function blank(){ return {id:'s'+Date.now().toString(36)+Math.random().toString(36).slice(2,7), name:'', cls:'', st:0, it:-1, res:{}, ratings:[], done:false, lp:0}; }
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
